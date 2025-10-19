@@ -1,0 +1,18 @@
+// Rickroll URL
+const rickrollURL = "https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1";
+
+// Select all buttons
+const buttons = document.querySelectorAll('button');
+
+// Replace click behavior
+buttons.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent original behavior
+    window.location.href = rickrollURL; // Redirect
+  });
+});
+
+// Optional: Also change cursor pointer to indicate clickable
+buttons.forEach(btn => {
+  btn.style.cursor = 'pointer';
+});
